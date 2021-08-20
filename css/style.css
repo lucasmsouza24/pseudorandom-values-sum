@@ -1,0 +1,37 @@
+body {
+    background-color: #151e29;    
+}
+
+#main-container {
+
+    /* size and border*/
+    width: 1000px;
+    height: 650px;
+    border: 1px #0f2e42 solid;
+    /* border-radius: 3%; */
+
+    /* align */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* color */
+    background-color: #151e29;
+    box-shadow: 0px 0px 10px black;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.bar {
+    /* size and border*/
+    width: 10px;
+    height: 0px;
+    border: 1px black solid;
+
+    /* color */
+    background-color: #e23e57;
+}
