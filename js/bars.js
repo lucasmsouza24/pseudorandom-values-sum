@@ -23,8 +23,8 @@ function render_bar(bar) {
 function grow_bar(bar) {
     let height = bar.offsetHeight;
 
-    if (height < 500) {
-        bar.style.height = height + 1 + "px";
+    if (height < 540) {
+        bar.style.height = height + 10 + "px";
         return true;
     }
     return false;
