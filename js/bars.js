@@ -21,6 +21,7 @@ function render_bar(bar) {
 }
 
 function grow_bar(bar) {
+    // console.log(bar)
     let height = bar.offsetHeight;
 
     if (height < 540) {
@@ -32,4 +33,49 @@ function grow_bar(bar) {
 
 function randomNum(min, max) {
 	return Math.floor(Math.random() * ((max + 1) - min)) + min;
+}
+
+function clearBars() {
+    content = document.querySelector("#main-container");
+    content.innerHTML = "";
+}
+
+function sum(array) {
+    let acumulator = 0
+
+    for (let i = 0; i < array.length; i++) {
+        acumulator += array[i];
+    }
+
+    return acumulator;
+}
+
+function generateIndex(amount, bars) {
+    let amountBars = bars.length - 1
+    let indexs = []
+    
+    for (let i = 0; i < amount; i++) {
+        indexs.push(randomNum(0, amountBars / amount));
+    }
+
+    console.log(indexs);
+
+    return sum(indexs);
+}
+
+function build_graph(amountBars, randomIndex, increment) {
+
+    clearBars();
+
+    let keep = true;
+
+    bars = create_bars(amountBars);
+
+    while(keep) {
+        let index = generateIndex(randomIndex, bars);
+        console.log(index);
+        if(!grow_bar(bars[index])) {
+            break;
+        }
+    }
 }

@@ -1,12 +1,7 @@
-let keep = true;
+function btnBuildGraph() {
+    let  bars = Number(inputBars.value);
+    let  randomIndex = Number(inputRandomIndex.value);
+    let  increment = Number(inputIncrement.value);
 
-let bars = create_bars(50);
-
-while(keep) {
-    let index1 = randomNum(0, (bars.length - 1) / 2)
-    let index2 = randomNum(0, (bars.length - 1) / 2)
-    
-    if(!grow_bar(bars[index1 + index2])) {
-        break;
-    }
+    build_graph(bars, randomIndex, increment);
 }
