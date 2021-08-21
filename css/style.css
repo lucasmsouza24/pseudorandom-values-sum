@@ -3,15 +3,19 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #ffffd2;
 }
 
+a:-webkit-any-link, a:visited {
+    color: #ffffd2;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .content-container {
     /* border: black solid 2px; */
-
-    margin-top: 50px;
 
     display: flex;
     flex-direction: row;
